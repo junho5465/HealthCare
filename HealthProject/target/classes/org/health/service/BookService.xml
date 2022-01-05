@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.health.service.BookService">
+	<select id="getList" resultType="org.health.domain.BookVO">
+		select * from book
+	</select>
+	
+	<select id="read" resultType="org.health.domain.BookVO">
+		select * from book where bookId=#{bookId}
+	</select>
+</mapper>
