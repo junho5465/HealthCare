@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.health.persistence.FoodMapper">
+	<select id="getCategoryList" resultType="org.health.domain.FoodVO">
+		select distinct first_cls from food_info
+	</select>	
+	
+	<select id="getListWithPaging" resultType="org.health.domain.FoodVO">
+		<![CDATA[select * from food_info]]>
+			<include refid="criteria"></include>
+		<![CDATA[limit #{pageStart}, #{amount}]]>
+	</select>
+	
+	<!-- 자주 사용하는 문장을 정의 하기 위한 구문 -->
+	<sql id="criteria">
+		<trim prefix="WHERE" prefixOverrides="AND | OR">					<!-- Where을 맨 앞에 붙이며 맨 마지막 OR은 빼주기 위한 문장 -->	
+			<if test="keyword != null">AND foodName like CONCAT('%',#{keyword},'%')</if>
+			<if test="category != null">AND first_cls like CONCAT('%',#{category},'%')</if>	
+		</trim>
+	</sql>
+	<!-- 자주 사용하는 문장을 정의 하기 위한 구문 -->
+	
+	<select id="getTotalCount" resultType="int">
+		select count(foodName) from food_info 
+		<include refid="criteria"></include>
+	</select>
+	
+	<select id="get" resultType="org.health.domain.FoodVO">
+		select * from food_info where foodNo=#{foodNo}
+	</select>
+	
+	<insert id="insert">
+		insert into user_food (userId, foodName, personer_dos, regDate, foodNo) values(#{userId},#{foodName},#{personer_dos},#{regDate},#{foodNo})
+	</insert>
+</mapper>

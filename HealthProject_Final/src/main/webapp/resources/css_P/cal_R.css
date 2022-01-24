@@ -1,0 +1,149 @@
+html, body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  .clearfix2:after {
+    content: '';
+    display: block;
+    clear: both;
+    float: none;
+  }
+  
+  /* ======== Calendar ======== */
+  .my-calendar2 {
+    width: 550px;
+    height: 300px;
+    margin-left: 9%;
+    margin-right:10%;
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+    font-weight: 800;
+    cursor: default;
+  }
+  .my-calendar2 .clicked-date2 {
+    border-radius: 25px;
+    float: left;
+    width: 45%;
+    height: 100%;
+    padding: 46px 0 26px;
+    background: #ddd;
+  }
+  .my-calendar2 .calendar-box2 {
+    float: right;
+    width: 55%;
+    height: 100%;
+    padding-left: 30px;
+  }
+  
+  .clicked-date2 .cal-day2 {
+    font-size: 24px;
+  }
+  .clicked-date2 .cal-date2 {
+    font-size: 130px;
+  }
+  
+  .ctr-box2 {
+    padding: 0 16px;
+    font-size: 18px;
+    margin-bottom: 20px;
+  
+  }
+  .ctr-box2 .btn-cal2 {
+    position: relative;
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+  .ctr-box2 .btn-cal2:after {
+    content: '<';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    height: 100%;
+    line-height: 25px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .ctr-box2 .btn-cal2.next2 {
+    float: right;
+  }
+  .ctr-box2 .btn-cal2.next2:after {
+    content: '>';
+  }
+  
+  .cal-table2 {
+    width: 100%;
+  }
+  .cal-table2 th {
+    width: 14.2857%;
+    padding-bottom: 5px;
+    font-size: 16px;
+    color: white;
+    font-weight: 900;
+  }
+  .cal-table2 td {
+    padding: 3px 0;
+    height: 28px;
+    font-size: 15px;
+    color: white;
+    vertical-align: middle;
+  }
+  .cal-table2 td.day {
+    position: relative;
+    cursor: pointer;
+  }
+  .cal-table2 td.today {
+    background: #ffd255;
+    border-radius: 50%;
+    color: #fff;
+  }
+  .cal-table2 td.day-active {
+    background: #ff8585;
+    border-radius: 50%;
+    color: #fff;
+  }
+  .cal-table2 td.has-event:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: #FFC107;
+  }
+.cal-month2 {
+  color: white;
+
+}
+
+#detail_food_p table{
+	margin-top: 25px;
+    width: 655px;
+	color:white;
+}
+
+#detail_food_p table tr:nth-child(even){ 
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+#detail_food_p table th {
+    text-align: center;
+    font-size: 20px;
+}
+
+#detail_food_p table tr {
+    height: 38px;
+}

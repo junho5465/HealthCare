@@ -1,0 +1,136 @@
+* {
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+}
+
+
+
+.tabs {
+  position:absolute;
+  top:35%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:1200px;
+  height:600px;
+}
+.tabs .tab-header {
+  background-color: #93878733;
+    border-radius: 10px 10px 0 0 ;
+  padding:10px;
+  display:flex;
+}
+.tabs .tab-header > div {
+  position:relative;
+  width:25%;
+  text-align:center;
+  padding:10px;
+  z-index:2;
+  font-weight:900;
+  font-size: 16px;
+  color: white;
+  cursor:pointer;
+  transition:all 300ms ease-in-out;
+}
+.tabs .tab-header > div.active {
+  color:red;
+}
+.tabs .tab-indicator {
+  position:absolute;
+  width:calc(25% - 5px);
+  height:40px;
+  background: rgba(0, 0, 0, 0.5);
+  top:10px;
+  left:10px;
+  border-radius:10px;
+  transition:all 300ms ease-in-out;
+}
+.tabs .tab-body {
+  position:relative;
+  padding:20px;
+  background-color: #93878733;
+  border-radius: 0 0 10px 10px;
+  border-top:4px solid rgba(132,132,132,0.5);
+  height:calc(100% - 50px);
+  overflow:hidden;
+}
+.tabs .tab-body > div {
+  position:absolute;
+  opacity:0;
+  top:-100%;
+  transform:translateY(-10px);
+  transition:opacity 300ms ease-in-out,
+            transform 300ms ease-in-out;
+}
+.tabs .tab-body > div.active {
+  transform:translateY(0px);
+  top:30px;
+  opacity:1;
+}
+.tabs .tab-body h1 {
+  color:#222;
+  margin-bottom:10px;
+}
+.tabs .tab-body p {
+  color:#555;
+  font-size:15px;
+}
+
+.graph{
+    float:left;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+    width: 800px;
+    height: 465px;
+    border-radius: 10px;
+}
+#input_w{
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+    margin-left: 15px;
+    float:left;
+    width: 350px;
+    height: 465px;
+    border-radius: 10px;
+}
+
+.per_info{
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 15px;
+  width: 1160px;
+  border-radius: 10px;
+  height: 465px;
+}
+
+#what{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  text-align: center;
+  
+}
+
+#chart_radar{
+  text-align: center;
+  float: left;
+  background-color: white;
+  padding: 10px;
+  height: 420px;
+  margin: 25px 0 25px 150px;
+  width: 420px;
+  border-radius: 15px;
+  
+}
+#info_you{
+  margin-left: 700px;
+  width: 430px;
+  height: 465px;
+  padding: 30px;
+}
+#yours{
+  color: white;
+  font-size: 22px;
+  padding-top: 25px;
+  font-weight: 900;
+}

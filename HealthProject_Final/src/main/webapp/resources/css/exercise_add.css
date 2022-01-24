@@ -1,0 +1,269 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+#basic-modal-content {
+    display: none;
+}
+
+body {
+    background: url(images/html.jpg) no-repeat center center fixed;
+    /* linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),  */
+    background-size: cover;
+
+}
+.addImg{
+	margin-top: 5%;
+	border-radius:5px;
+	margin-left:10%;	
+	width:70%;
+	height:350px;
+	background:white;
+}
+div label {
+    color: white;
+}
+
+.rb-box {
+    width: 100%;
+    max-width: 1800px;
+    margin: 50px auto;
+    padding: 1.3em;
+    border-radius: .75em;
+    -webkit-filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, .3));
+    filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, .3));
+    box-shadow: 5px 10px 18px rgb(236, 164, 81);
+    -webkit-box-shadow: 5px 10px 18px rgb(236, 164, 81);
+}
+
+button.btn {
+    margin-top: 25px;
+    height: 35px;
+}
+
+div {
+    display: block;
+}
+
+a {
+    color: #606060;
+    text-decoration: none;
+}
+
+#substance {
+    overflow: hidden;
+    width: 90%;
+    min-height: 850px;
+    padding: 35px;
+}
+
+.sub_header {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.sub_title {
+    clear: both;
+    position: relative;
+    padding: 20px 0;
+    color: white;
+    font-size: 34px;
+    font-weight: 600;
+    background: transparent;
+    line-height: 34px;
+}
+
+.subcontents {
+    position: relative;
+    margin: 35px 0;
+    width: 95%;
+    padding: 0 0 0 5px;
+}
+
+.calculator {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 45px;
+}
+
+.calorie_chart {
+    float: left;
+    width: 55%;
+    margin-right: 5%;
+}
+
+.calorie_list {
+    float: right;
+    width: 40%;
+}
+
+.chartH {
+    overflow: hidden;
+    border: 1px solid #dfdfdf;
+    border-top: 2px solid gray;
+    background: #f5f5f5;
+}
+
+.chartH span {
+    display: inline-block;
+    padding: 5px;
+}
+
+.chartH a {
+    float: right;
+    display: block;
+    width: 100px;
+    color: #9c9c9c;
+    text-align: center;
+    padding: 5px 5px 5px 0;
+    border-left: 1px solid #dfdfdf;
+    background: url(../images/common/bullet04.png) 90% -28px no-repeat;
+}
+#currentDate {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 170px;
+    font-size: 20px;
+    border: none;
+    background: rgba(255,255,255,0);
+}
+.list_more2{
+	height:70px;
+	padding-left:35%;
+}
+.pre_view {
+    padding: 10px 0;
+}
+.btn-st{
+	background:rgba(255,255,255,0);
+	font-size:20px;
+	width:30px;
+	border:none;
+	outline:none;
+	cursor:auto;
+	color:black;
+}
+.pre_view h3 {
+    padding: 0 0 10px 0px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.colr_pp {
+    color: white;
+}
+
+/* .nutrients li{color: yellowgreen; padding:0 0 8px 0px;} */
+.calorie_view {
+    position: relative;
+    padding: 12px;
+    border: 1px solid #dfdfdf;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.calorie_view h3 {
+    padding-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.prev_date, .next_date {
+    padding: 0 10px;
+    outline:none;
+}
+
+.list_more {
+    min-height: 311px;
+    border: 1px solid #bebebe;
+}
+
+.calorie_view ul {
+    padding: 5px;
+}
+
+.calorie_view ul .colr_pk {
+    text-align: right;
+    width: 38px;
+}
+
+.calorie_view li {
+    padding: 4px 10px;
+    border-top: 1px dotted #dfdfdf;
+}
+
+.calorie_view li:first-child {
+    border-top: none;
+}
+
+.calorie_view li * {
+    vertical-align: middle;
+}
+
+.calorie_view li span {
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* .btn_sv1 {
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    left: 40%;
+    background-image: url(images/more_bg.gif);
+} */
+.btn1{
+	display: inline-block;
+    padding: 6px 12px;
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn_sv1:hover {
+    color: black;
+}
+
+.breadcrumb {
+    clear: both;
+}
+
+.breadcrumb span {
+    color: #6f2b91;
+    font-weight: 600;
+}
+.row img{
+	width:100%;
+	margin-top:20px;
+}
+.breadcrumb a, .breadcrumb span {
+    padding: 0 5px;
+}
+.basicBorder{
+	border:none;
+	outline:none;
+}
+.calorie_H {
+    overflow: hidden;
+    padding: 10px 20px;
+    color: #585858;
+    /* height: 60px; */
+    background-color: rgba(255, 255, 255, .9);
+}

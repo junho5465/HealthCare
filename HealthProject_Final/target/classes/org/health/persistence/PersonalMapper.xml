@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.health.persistence.PersonalMapper">
+	
+	<select id="getAverage" resultType="org.health.domain.PersonalVO">
+		select avg(height) as height ,avg(weight) as weight ,avg(muscle) as muscle ,avg(fat) as  fat  from user_spec 
+	</select>
+	
+	<select id="check_date" resultType="int">
+		select EXISTS (select * from user_spec where regDate=#{regDate} limit 1) as success
+	</select>
+	
+	
+	<insert id ="insert_w">
+   		insert into user_spec(userId , height ,weight ,regDate)
+   		value(#{userId} ,#{user_hei},#{weight_input} ,Date(#{cal_W_in}))
+   	</insert>
+   
+   <update id="update_w">
+   		update user_spec
+   		set weight = #{weight_input}
+   		where userId =#{userId} and regDate = Date(#{cal_W_in})
+   </update>
+   
+   	<insert id ="insert_f">
+   		insert into user_spec(userId , height ,fat ,regDate)
+   		value(#{userId} ,#{user_hei},#{fat_input} ,Date(#{cal_F_in}))
+   	</insert>
+   
+   <update id="update_f">
+   		update user_spec
+   		set fat = #{fat_input}
+   		where userId =#{userId} and regDate = Date(#{cal_F_in})
+   </update>
+   
+   
+   <insert id ="insert_m">
+   		insert into user_spec(userId , height ,muscle ,regDate)
+   		value(#{userId} ,#{user_hei},#{muscle_input} ,Date(#{cal_M_in}))
+   	</insert>
+   
+   <update id="update_m">
+   		update user_spec
+   		set muscle = #{muscle_input}
+   		where userId =#{userId} and regDate = Date(#{cal_M_in})
+   </update>
+
+</mapper>

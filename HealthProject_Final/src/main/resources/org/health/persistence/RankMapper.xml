@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.health.persistence.RankMapper">
+	
+	<select id="getfirst" resultType="org.health.domain.RankingVO">
+		select * from user_point order by point desc , grade asc ,userId asc limit 1
+	</select>
+	<select id="getsecond" resultType="org.health.domain.RankingVO">
+		select * from user_point order by point desc , grade asc ,userId asc limit 1,1
+	</select>
+	<select id="getthird" resultType="org.health.domain.RankingVO">
+		select * from user_point order by point desc , grade asc ,userId asc limit 2,1
+	</select>
+	
+	<select id="leftover" resultType="org.health.domain.RankingVO">
+		select * from user_point order by point desc limit 3, 10
+	</select>
+</mapper>

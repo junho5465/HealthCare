@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.health.persistence.ExerciseMapper">
+	<select id="getCardioList" resultType="org.health.domain.CardioVO">
+		select * from cardio_info;
+	</select>		
+	
+	<select id="getWeightList" resultType="org.health.domain.WeightVO">
+		select * from weight_info;
+	</select>	
+	
+	<insert id="insertCardio">
+		insert into personal_cardio (userId, exercise_cardio, cardio_time, exer_date) values(#{userId}, #{exercise_cardio}, #{cardio_time}, #{exer_date})
+	</insert>
+	
+	<insert id="insertWeight">
+		insert into personal_weight (userId, exercise_kinds, weight_set, date) values(#{userId}, #{exercise_kinds}, #{weight_set}, #{date})
+	</insert>
+	
+	<update id="updatePointCardio">
+      update user_point set point = point + #{cardio_time} where userId = #{userId}
+   </update>
+   
+   <update id="updatePointWeight">
+      update user_point set point = point + #{weight_set} where userId = #{userId}
+   </update>
+</mapper>

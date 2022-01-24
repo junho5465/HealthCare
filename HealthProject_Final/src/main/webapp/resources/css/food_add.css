@@ -1,0 +1,446 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	/*font-family: 'Gowun Batang', cursive;*/
+}
+
+
+.inp_box {
+	/* float: right; width: 150px; margin-right:100px; margin-top:-60px; */
+	height: 32px;
+	font-size: 15px;
+	border: 0;
+	border-radius: 15px;
+	outline: none;
+	padding-left: 10px;
+	background-color: rgb(233, 233, 233);
+}
+
+body {
+	background: url("/resources/image/back.jpg") no-repeat center center
+		fixed;
+	/* linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),  */
+	background-size: cover;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.rb-box {
+	width: 100%;
+	/* max-width: 1200px; */
+	margin: 50px auto;
+	padding: 1.3em;
+	border-radius: .75em;
+	-webkit-filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, .3));
+	filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, .3));
+	background-image: url('project_bg2.jpg');
+	box-shadow: 5px 10px 18px rgb(236, 164, 81);
+	-webkit-box-shadow: 5px 10px 18px rgb(236, 164, 81);
+}
+
+.btn-loc {
+	position: absolute;
+    margin-top: -30px;
+    right: 5px;
+}
+.inp_loc{
+    width: 150px;
+    position: absolute;
+    right: 15%;
+    margin-top: -30px;
+}
+div {
+	display: block;
+}
+
+a {
+	color: #606060;
+	text-decoration: none;
+}
+
+#substance {
+	overflow: hidden;
+	width: 90%;
+	padding: 35px 35px 35px 35px;
+}
+
+.sub_header {
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.sub_title {
+	clear: both;
+	position: relative;
+	padding: 20px 0;
+	color: white;
+	font-size: 34px;
+	font-weight: 600;
+	background: transparent;
+	line-height: 34px;
+}
+
+.subcontents {
+	position: relative;
+	margin: 35px 0;
+	width: 100%;
+	padding: 0 0 0 5px;
+	min-width:1350px;
+}
+
+/* .obesity {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #dfdfdf;
+    border-top: 2px solid gray;
+    background: url(../images/common/pattern2.gif) repeat;
+} */
+
+.food_list {
+	float: left;
+	height: 134px;
+	background: #fff;
+	font-family: dotum;
+}
+
+.food_list a:hover {
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.food_list ul {
+	height: 104px;
+	padding: 15px;
+}
+
+.food_list a {
+	display: block;
+	padding: 5px 10px;
+	background: url(../images/common/bullet13.gif) 0 10px no-repeat;
+	color: #616161;
+	font-size:17px;
+}
+
+.food_list ul {
+	overflow-y: scroll;
+}
+
+.food_list {
+	width: 100%;
+}
+
+.food_list li {
+	float: left;
+	width: 18%;
+	padding-left: 10px;
+}
+
+.calculator {
+	overflow: hidden;
+	width: 100%;
+	margin-top: 45px;
+}
+
+.calorie_chart {
+	float: left;
+	width: 65%;
+	margin-right: 5%;
+	min-width:800px;
+}
+
+.calorie_list {
+	float: right;
+	width: 30%;
+}
+
+.chart {
+	position: relative;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+.chartH {
+	overflow: hidden;
+	border: 1px solid #dfdfdf;
+	border-top: 2px solid gray;
+	background: #f5f5f5;
+	margin: 0;
+	padding-left:10px;
+	border-radius: 5px;
+}
+
+.chartH span {
+	display: inline-block;
+	padding: 5px;
+}
+
+.chartH a {
+	float: right;
+	display: block;
+	width: 100px;
+	color: #9c9c9c;
+	text-align: center;
+	padding: 5px 5px 5px 0;
+	border-left: 1px solid #dfdfdf;
+	background: url(../images/common/bullet04.png) 90% -28px no-repeat;
+}
+
+.chart span {
+	display: block;
+}
+
+.chart ul {
+	overflow: hidden;
+	
+}
+
+.chart li {
+	float: left;
+	color:#ececec;
+}
+
+.chart li input{
+	color:black;
+	cursor: pointer;
+}
+
+.chart li:first-child {
+	background-image: none;
+}
+
+.pre_view {
+	padding: 0 0 0 0;
+}
+
+.pre_view h3 {
+	padding: 0 0 8px 0;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.colr_pp {
+	color: white;
+	font-size: 20px;
+	font-weight:bold;
+	margin-top:20px;
+	display:block;
+}
+
+.nutrients {
+	color: red;
+}
+
+.btn_wrap {
+	float: left;
+	clear: both;
+	width: 891px;
+	position: relative;
+	margin-top: 10px;
+	height: 50px;
+	z-index: 100;
+}
+
+.btn_cart {
+	position: absolute;
+	top: 30px;
+	right: 10px;
+	display: block;
+	width: 57px;
+	height: 20px;
+	padding-top: 5px;
+	font-family: dotum;
+	color: #2c2c2c;
+	font-weight: 400;
+	text-align: center;
+	background: url(../images/common/btn_cart.gif) no-repeat;
+}
+
+.notice_pag {
+	float: left;
+	width: 100%;
+	margin-top: 15px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.notice_pag a {
+	display: inline-block;
+	padding: 4px 6px 2px 6px;
+	font-family: Verdana;
+	text-align: center;
+	color: #a2a2a2;
+	margin: 0px;
+}
+
+.notice_pag span {
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	border: 1px solid #dadada;
+	margin: 0px;
+	background: url(../images/common/page_btn.gif) 6px 50% no-repeat;
+}
+
+.notice_pag a, .notice_pag span {
+	vertical-align: middle;
+}
+
+.calorie_view {
+	position: relative;
+	padding: 12px;
+	border: 1px solid #dfdfdf;
+	background: #f9f9f9;
+	border-radius: 5px;
+}
+
+.calorie_view h3 {
+	padding-bottom: 20px;
+	font-size: 14px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.prev_date, .next_date {
+	padding: 0 10px;
+	color:black;
+	outline:none;
+}
+
+.calorie_view ul {
+	padding: 10px;
+}
+
+.calorie_view ul .colr_pk {
+	text-align: right;
+	width: 38px;
+}
+
+.calorie_view li {
+	padding: 4px 10px;
+	border-top: 1px dotted #dfdfdf;
+}
+
+.calorie_view li:first-child {
+	border-top: none;
+}
+
+.calorie_view li * {
+	vertical-align: middle;
+}
+
+.calorie_view li span {
+	display: inline-block;
+	font-weight: bold;
+}
+
+.list_more {
+	min-height: 311px;
+	border: 1px solid #bebebe;
+	/* background: #fff url(../images/common/more_bg.gif) 0 100% repeat-x; */
+}
+.list_more2{
+	height:70px;
+}
+#kcal_category2{
+	margin-left:40px;
+}
+.btn_sv1 {
+	display: block;
+	position: absolute;
+	bottom: 25px;
+	left: 40%;
+}
+.modalH {
+	padding: 20px 10px;
+	font-weight: 600;
+	font-size: 23px;
+	color: #fff;
+}
+
+.breadcrumb {
+	clear: both;
+}
+
+.breadcrumb span {
+	color: #6f2b91;
+	font-weight: 600;
+}
+
+.breadcrumb a, .breadcrumb span {
+	padding: 0 5px;
+}
+
+.obesity {
+	overflow: hidden;
+	width: 100%;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-top: 5px;
+	border: 1px solid #dfdfdf;
+	border-radius: 5px;
+	/* border-top: 2px solid #585858; */
+	background: url(../images/common/pattern2.gif) repeat;
+}
+
+.obesity {
+	min-width: 900px !important
+}
+
+.calorie_H {
+	overflow: hidden;
+	padding: 10px 20px;
+	color: #585858;
+	/* height: 60px; */
+	background-color: rgba(255, 255, 255, .9);
+}
+
+.calorie_H * {
+	vertical-align: middle;
+}
+
+.calorie_H span {
+	float: left;
+	padding: 5px 0;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.calorie_H p {
+	float: left;
+	margin-left: 20px;
+	background: #b2b2b2;
+	border-radius: 5px;
+}
+
+.inp_txt {
+	width: 300px;
+	padding: 5px 5px;
+	height: 40px;
+	border: 2px solid #b2b2b2;
+	border-radius: 5px;
+	margin: 0 20px 0 20px;
+	font-size: 18px;
+}
+#currentDate{
+	margin-left:5px;
+	margin-right:5px;
+	width:170px;
+	font-size:20px;
+	border: none;
+    background: rgba(255,255,255,0);
+}
+.btn-st{
+	background:rgba(255,255,255,0);
+	font-size:20px;
+	width:30px;
+	border:none;
+	outline:none;
+	cursor:auto;
+}

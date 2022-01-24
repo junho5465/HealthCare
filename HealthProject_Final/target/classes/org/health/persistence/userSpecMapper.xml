@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.health.persistence.userSpecMapper">
+
+	<select id="getNullCheck" resultType="int">
+		select count(*) from user_spec where userId =#{userId};
+	</select>
+
+	<select id="getSpec" resultType="org.health.domain.userVO">
+		select * from user_spec where userId = #{userId} order by regDate desc limit 1
+	</select>
+	
+	<select id="getImg" resultType="String">
+		select img from user_info where userId = #{userId}
+	</select>
+	
+	<select id="getGrade" resultType="String">
+		select grade from user_point where userId = #{userId}
+	</select>
+	
+	<select id="getAvgHeight"  resultType="Double">
+		select avg(height) from user_spec
+	</select>
+	<select id="getAvgWeight"  resultType="Double">
+		select avg(weight) from user_spec
+	</select>
+	<select id="getAvgMuscle"  resultType="Double">
+		select avg(muscle) from user_spec
+	</select>
+	<select id="getAvgFat"  resultType="Double">
+		select avg(fat) from user_spec
+	</select>
+		<insert id="insertID">
+	insert into user_spec(userId,height,weight) value(#{userId},#{height},#{weight})
+	</insert>
+	
+</mapper>

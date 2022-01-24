@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+/* 배경사진 넣기 */
+body {
+    background-image: url('project_bg.jpg');
+    overflow: hidden;
+
+}
+
+/* 감싸고 있는 곳 */
+.bx-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2%;
+    padding: 0.2%;
+    height: 50%;
+    background-image: url('project_bg2.jpg');
+    transform: translate(-50%, -50%);
+}
+
+/* 폼 나오는곳 */
+.bx-viewport {
+    padding-top: 2%;
+}
+
+.survey_q {
+    text-align: center;
+    font-family: 'Poor Story', cursive;
+    font-size:25px;
+}
+
+.survey1 {
+    text-align: center;
+    color: rgba(157, 238, 238,0.7);
+}
+
+.title1_Q {
+    text-align: center;
+    color: pink;
+}
+
+/* 설문조사 질문 칸 */
+.surveysName {
+    color: rgb(119, 246, 87);
+    margin-top: 2%;
+    font-size :20px;
+    font-family: 'Poor Story', cursive;
+}
+
+.custom-style {
+    font-size: 25px;
+    color: #FF0084;
+    border: 2px solid#FF0084;
+    -webkitbox-shadow: inset 0px 0.1em 0.1em rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0px 0.1em 0.1em rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0.1em 0.1em rgba(0, 0, 0, 0.3);
+}
+
+/* 박스 쉐도잉 */
+.rb-box {
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 1em;
+    border-radius: .75em;
+    -webkit-filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, .3));
+    filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, .3));
+    background-image: url('project_bg2.jpg');
+    box-shadow: 1px 1px 18px 10px rgb(236 164 81);
+}
+
+
+/* 라디오 버튼 */
+.center {
+    display: flex;
+    min-height: 2vh;
+}
+.radio-group {
+    margin: auto;
+    display: flex;
+}
+@media (max-width: 48em) {
+    .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+   }
+}
+.radio-group-label {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+.radio-label {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    font-family: 'Poor Story', cursive;
+    color:white;
+    font-size:18px;
+}
+@media (max-width: 48em) {
+    .radio-label {
+        display: block;
+        margin: 10px 0;
+   }
+}
+.radio-label input {
+    opacity: 0;
+    position: absolute;
+}
+.radio-label .inner-label {
+    position: relative;
+    display: inline-block;
+    padding-left: 40px;
+}
+.radio-label .inner-label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+    width: 30px;
+    transition: border-bottom 0.5s ease;
+}
+.radio-label input:focus ~ .inner-label:before {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+}
+.radio-label input:checked ~ .inner-label:after {
+    content: '\2713';
+    color: #fff;
+    position: absolute;
+    font-size: 12px;
+    left: 12px;
+    top: 1px;
+}
+
+.wrap {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+/* 설문조사 마치는 버튼 */
+#logo {
+    display: block;
+    background: url('./image/fire2.jpg');
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: fire 10s linear infinite;
+    font-size: 100px;
+    font-weight: 900;
+    font-family: 'Kaushan Script', cursive;
+}
+
+@keyframes fire {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    0% {
+        background-position: 100% -50%;
+    }
+}
+
+ .pulse:hover, .pulse:focus {
+	 animation: pulse 1s;
+	 box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+ @keyframes pulse {
+	 0% {
+		 box-shadow: 0 0 0 0 var(--hover);
+	}
+}
+ .pulse {
+	 --color: #ef6eae;
+	 --hover: #ef8f6e;
+}
+
+ button {
+	 color: var(--color);
+	 transition: 0.25s;
+	 font-family: 'Poor Story', cursive;
+}
+ button:hover, button:focus {
+	 border-color: var(--hover);
+	 color: #fff;
+}
+button {
+	 background: none;
+	 border: 2px solid;
+	 font: inherit;
+	 line-height: 1;
+	 margin: 0.5em;
+	 padding: 1em 2em;
+}
+
+ code {
+	 color: #e4cb58;
+	 font: inherit;
+}
